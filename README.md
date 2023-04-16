@@ -15,7 +15,7 @@ from bot.models.message import Message
 bot = Bot('my-bot')
 dispatcher = CliDispatcher(bot=bot)
 
-@bot.command('help')
+@bot.command('help', description: 'help command')
 def help_handler(msg: Message) -> str:
     return 'вот так нужно пользоваться моим ботом'
 
